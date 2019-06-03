@@ -1,0 +1,50 @@
+body{
+	padding: 70px 0px 0px 0px;
+	z-index: 0;
+	margin: 40;
+}
+.navbar-dark{
+	background:#1d3966;
+}
+.errorIntro {
+  visibility: visible;
+	color: red;
+}
+
+.errorIntro.hidden {
+	visibility: hidden;	
+}
+ul li {
+	list-style-type: none;
+	padding: 15px;
+	margin: 15px 0;
+	background-color: #00323f; 
+	color: white;	
+}
+.outPut li {
+	font-weight: bold;
+}
+.container{
+	background-color: #e1ebf6;
+}
+fieldset {
+	padding: 15px 0;
+
+}
+input{
+	border:solid black 1px;
+}
+
+.map-container{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}

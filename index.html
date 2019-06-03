@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+  
+    <!-- Bootstrap CSS -->
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.2.13/ng-file-upload.min.js"></script>   
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="icon" type="image/ico" href="img/logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>LOCALE</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container-fluid " >                
+            <a class="navbar-brand ml-3" href="./index.html"><img src="img/logo.png" height="50px" class="img-responsive "></a>
+        </div>    
+    </nav>
+
+<div class="container" ng-controller="MyController">
+    <div class="row mt-4">
+        <div class="col-11">
+            <h2 id="introHeader" class="m-2">Upload your CSV File</h2>                    
+            <fieldset >
+                <input type="file" ngf-select="SelectFile($file)" >
+                <input type="button" value="Upload" ng-click="Upload()" />
+            </fieldset>
+           <div ng-show="IsVisible">
+                <ul id="statOutPut" class="outPut" ng-repeat="m in Locations">
+                    <li><big>From Latitude:</big><span>&nbsp;{{m.from_lat}}</span></li>       
+                    <li><big>From Longitude:</big> <span>&nbsp;{{m.from_long}}</span></li> 
+                    <li><big>To Latitude:</big> <span>&nbsp;{{m.to_lat}}</span></li>
+                    <li><big>To Longitude:</big> <span>&nbsp;{{m.to_long}}</span></li>  
+                </ul>
+            </div>            
+        </div>
+    </div>
+
+<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1944.5429889803022!2d77.51748765790484!3d12.90219281221768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fa7243af9c3%3A0x9bed6669a38d1c3!2sRNS+INSTITUTE+OF+TECHNOLOGY!5e0!3m2!1sen!2sin!4v1559545339355!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> 
+</div>
+</div>
+</body>
+
+
+</html>
